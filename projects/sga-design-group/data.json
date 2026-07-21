@@ -1,0 +1,62 @@
+{
+  "title": "SGA Design Group",
+  "year": "2023",
+  "role": "Brand Design",
+  "description": "A collection of work created at SGA Design Group. Including designs for its subsidiaries, GreenLight 360 and Renaissance Architecture.",
+  "thumbnail": {
+    "image": "sga thumbnail.png",
+    "alt": "SGA Design Group cover image"
+  },
+  "sections": [
+    {
+      "type": "gallery",
+      "heading": "Social Media",
+      "images": [
+        {
+          "image": "sga-character-animation-gif.gif",
+          "alt": "SGA Character Animation Gif"
+        },
+        {
+          "image": "ra-we-are-hiring-gif.gif",
+          "alt": "RA We Are Hiring Gif"
+        },
+        {
+          "image": "sga-we-are-hiring-gif-2.gif",
+          "alt": "SGA We Are Hiring Gif"
+        },
+        {
+          "image": "anniversary-post-1.jpg",
+          "alt": "SGA Anniversary Post 1"
+        },
+        {
+          "image": "anniversary-post-2.jpg",
+          "alt": "SGA Anniversary Post 2"
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "heading": "Branding",
+      "content": "The logo mark represents..."
+    },
+    {
+      "type": "image",
+      "image": "brand-guidelines.png",
+      "alt": "SGA brand guidelines"
+    },
+    {
+      "type": "gallery",
+      "heading": "Website Design",
+      "images": [
+        {
+          "image": "homepage.png",
+          "alt": "Website homepage design"
+        },
+        {
+          "image": "interior-page.png",
+          "alt": "Website interior page design"
+        }
+      ]
+    }
+  ]
+}

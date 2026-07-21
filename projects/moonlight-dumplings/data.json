@@ -1,0 +1,42 @@
+{
+  "title": "Moonlight Dumplings",
+  "year": "2021",
+  "role": "Brand Design",
+  "description": "Moonlight Dumplings is an imaginary fast food restaurant that offers high quality dumplings for anyone with a late-night craving. The Moonlight app offers the user a simple and easy way to browse the menu, order food, and make payments all in one go.",
+  "thumbnail": {
+    "image": "Moonlight_Cover_Image.png",
+    "alt": "Moonlight Dumplings cover image"
+  },
+  "sections": [
+    {
+      "type": "image",
+      "image": "Moonlight_Branding_Logos.png",
+      "alt": "Moonlight Dumplings branding and logos"
+    },
+    {
+      "type": "text",
+      "title": "Branding",
+      "content": "The logo mark represents a crescent moon dumpling, which also forms the letter D, and a star to reference the late-night aspect of the establishment."
+    },
+    {
+      "type": "image",
+      "image": "Moonlight_Mockups_3UP.png",
+      "alt": "Moonlight app mockups"
+    },
+    {
+      "type": "text",
+      "title": "Features",
+      "content": "The opening carousel uses illustration to draw in the user while also highlighting the different features of the app itself. The user is given the option to create an account now or head straight into the app and begin ordering."
+    },
+    {
+      "type": "image",
+      "image": "Moonlight_Mockups_4UP.png",
+      "alt": "Moonlight app mockups"
+    },
+    {
+      "type": "text",
+      "title": "Menu",
+      "content": "The app uses a variety of illustrations to engage the user additionally each of these illustrations are animated to make the overall user experience fun and engaging. The overall UI is more gesture-based rather than icon-based and encourages the user to swipe around and explore the various features the app has to offer. The menu offers a variety of dumplings and allows the user to sort the menu by the key ingredients found inside the dumpling. Additionally, the user can choose between steamed dumplings and fried dumplings and each menu item is categorized accordingly.​​​​​​​"
+    }
+  ]
+}
