@@ -9,7 +9,7 @@ export async function loadHeader() {
   const currentPath = normalize(window.location.pathname);
 
   try {
-    const response = await fetch("/src/components/header.html");
+    const response = await fetch("/components/header.html");
 
     if (!response.ok) {
       throw new Error("Failed to load header");
