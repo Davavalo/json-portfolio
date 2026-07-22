@@ -1,12 +1,12 @@
 {
-  "title": "SGA Design Group",
-  "year": "2023",
-  "role": "Brand Design",
-  "description": "A collection of work created at SGA Design Group. Including designs for its subsidiaries, GreenLight 360 and Renaissance Architecture.",
   "thumbnail": {
     "image": "sga thumbnail.png",
     "alt": "SGA Design Group cover image"
   },
+  "title": "SGA Design Group",
+  "year": "2023",
+  "role": "Brand Design",
+  "description": "A collection of work created at SGA Design Group. Including designs for its subsidiaries, GreenLight 360 and Renaissance Architecture.",
   "sections": [
     {
       "type": "gallery",
@@ -31,30 +31,62 @@
         {
           "image": "anniversary-post-2.jpg",
           "alt": "SGA Anniversary Post 2"
+        },
+        {
+          "image": "anniversary-post-3.png",
+          "alt": "SGA Anniversary Post 3"
+        },
+        {
+          "image": "anniversary-post-4.jpg",
+          "alt": "SGA Anniversary Post 4"
+        },
+        {
+          "image": "projects-completed-gif.gif",
+          "alt": "Projects Completed Gifs"
+        },
+        {
+          "image": "andrew-social-post.png",
+          "alt": "Greenlight Employee Post"
+        },
+        {
+          "image": "bernie-social-post.png",
+          "alt": "RA Employee Post"
+        },
+        {
+          "image": "greenlight-hiring-post.jpg",
+          "alt": "Greenlight Hiring Post"
         }
       ]
     },
     {
-      "type": "text",
-      "heading": "Branding",
-      "content": "The logo mark represents..."
-    },
-    {
       "type": "image",
-      "image": "brand-guidelines.png",
-      "alt": "SGA brand guidelines"
+      "heading": "GreenLight 360 Logo Animation and Newsletter",
+      "image": "gl360-logo-animation-newsletter.gif",
+      "link": "https://mailchi.mp/sgadesigngroup/ifwallscouldtalk",
+      "caption": "Click the Image to see the Full Newsletter. I coded the layout in MailChimp using CSS and HTML.",
+      "alt": "GL360 Logo and Newsletter Animation"
     },
     {
       "type": "gallery",
-      "heading": "Website Design",
+      "heading": "Cards",
       "images": [
         {
-          "image": "homepage.png",
-          "alt": "Website homepage design"
+          "image": "sga-holiday-card-outside.png",
+          "alt": "SGA Holiday Card Outside"
         },
         {
-          "image": "interior-page.png",
-          "alt": "Website interior page design"
+          "image": "sga-card-inside.png",
+          "alt": "SGA Holiday Card Inside"
+        },
+        {
+          "image": "sga-holiday-card-animation.gif",
+          "alt": "SGA Holiday Card Animation"
+        },
+        {
+          "type": "image",
+          "heading": "Banners",
+          "image": "sga-banner-designs.png",
+          "alt": "SGA Banner Designs"
         }
       ]
     }

@@ -13,9 +13,37 @@ async function loadProject() {
 
   document.title = `${project.title} — Victor Davalos`;
 
+  const thumbnailHTML = project.thumbnail
+    ? `
+      <section class="full-width bg-dark mb-4">
+        <div class="container image-grid-section">
+          <div class="image-grid">
+            <figure>
+              <img
+                src="./images/${project.thumbnail.image}"
+                alt="${project.thumbnail.alt || ""}"
+                class="lightbox-img"
+              >
+
+              ${
+                project.thumbnail.caption
+                  ? `<figcaption>${project.thumbnail.caption}</figcaption>`
+                  : ""
+              }
+
+            </figure>
+          </div>
+        </div>
+      </section>
+    `
+    : "";
+
   let html = `
+    ${thumbnailHTML}
+
     <section class="container work-entry mb-4">
       <div class="work-heading">
+
         <h2 class="work-title">
           ${project.title}
         </h2>
@@ -25,6 +53,7 @@ async function loadProject() {
           <span class="separator">&middot;</span>
           <span>${project.role}</span>
         </div>
+
       </div>
 
       <div class="work-line"></div>
@@ -32,55 +61,38 @@ async function loadProject() {
       <p class="work-description">
         ${project.description}
       </p>
+
     </section>
   `;
 
-  // Thumbnail / hero image
-  if (project.thumbnail) {
-    html += `
-      <section class="full-width bg-dark mb-4">
-        <div class="container image-grid-section">
-          <div class="image-grid">
-            <figure>
-              <img
-                src="./images/${project.thumbnail.image}"
-                alt="${project.thumbnail.alt}"
-                class="lightbox-img"
-              >
-            </figure>
-          </div>
-        </div>
-      </section>
-    `;
-  }
-
   project.sections.forEach((section) => {
     switch (section.type) {
-      case "image":
-        html += `
-          <section class="container image-grid-section mb-4">
-            <div class="image-grid">
+      case "image": {
+        const imageHTML = section.link
+          ? `
+            <a 
+              href="${section.link}" 
+              target="_blank" 
+              rel="noopener noreferrer"
+            >
+              <img
+                src="./images/${section.image}"
+                alt="${section.alt || ""}"
+              >
+            </a>
+          `
+          : `
+            <img
+              src="./images/${section.image}"
+              alt="${section.alt || ""}"
+              class="lightbox-img"
+            >
+          `;
 
-              ${
-                section.heading
-                  ? `<h3 class="grid-title">${section.heading}</h3>`
-                  : ""
-              }
+        const captionHTML = section.caption
+          ? `<figcaption>${section.caption}</figcaption>`
+          : "";
 
-              <figure>
-                <img
-                  src="./images/${section.image}"
-                  alt="${section.alt}"
-                  class="lightbox-img"
-                >
-              </figure>
-
-            </div>
-          </section>
-        `;
-        break;
-
-      case "gallery":
         html += `
           <section class="container image-grid-section mb-4">
 
@@ -92,27 +104,64 @@ async function loadProject() {
 
             <div class="image-grid">
 
-              ${section.images
-                .map(
-                  (image) => `
-                    <figure>
-                      <img
-                        src="./images/${image.image}"
-                        alt="${image.alt}"
-                        class="lightbox-img"
-                      >
-                    </figure>
-                  `,
-                )
-                .join("")}
+              <figure>
+                ${imageHTML}
+                ${captionHTML}
+              </figure>
 
             </div>
 
           </section>
         `;
-        break;
 
-      case "text":
+        break;
+      }
+
+      case "gallery": {
+        const imagesHTML = section.images
+          .map(
+            (image) => `
+              <figure>
+
+                <img
+                  src="./images/${image.image}"
+                  alt="${image.alt || ""}"
+                  class="lightbox-img"
+                >
+
+                ${
+                  image.caption
+                    ? `<figcaption>${image.caption}</figcaption>`
+                    : ""
+                }
+
+              </figure>
+            `,
+          )
+          .join("");
+
+        html += `
+          <section class="container image-grid-section mb-4">
+
+            ${
+              section.heading
+                ? `<h3 class="grid-title">${section.heading}</h3>`
+                : ""
+            }
+
+            <div class="image-grid">
+
+              ${imagesHTML}
+
+            </div>
+
+          </section>
+        `;
+
+        break;
+      }
+
+      case "text": {
         html += `
           <section class="container image-grid-section mb-4">
 
@@ -128,7 +177,9 @@ async function loadProject() {
 
           </section>
         `;
+
         break;
+      }
     }
   });
 

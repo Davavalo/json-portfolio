@@ -15,6 +15,7 @@ export default defineConfig({
         ),
 
         sga: resolve(__dirname, "projects/sga-design-group/index.html"),
+        future: resolve(__dirname, "projects/futures-so-bright/index.html"),
       },
     },
   },

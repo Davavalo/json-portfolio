@@ -1,0 +1,55 @@
+{
+  "thumbnail": {
+    "image": "TCCF_FutureSoBright_Thumbnail.png",
+    "alt": "Future’s So Bright Thumbnail"
+  },
+  "title": "Future's So Bright",
+  "year": "2025",
+  "role": "Event Design",
+  "description": "This forward-looking theme celebrated opportunity, optimism, and the transformative power of education. Designed to reflect Tulsa Community College’s mission of empowering students and strengthening the community, Future’s So Bright created an energetic and uplifting atmosphere where donors could connect with real stories of student success and possibility.",
+  "sections": [
+    {
+      "type": "text",
+      "heading": "My Role",
+      "content": "Based on the approved event concept, I designed all of the creative assets for the event, including the save the date, invitation, stationery system, event collateral, and large-format event graphics."
+    },
+    {
+      "type": "image",
+      "heading": "Save The Date",
+      "image": "5x7_SaveTheDate_TCCF.png",
+      "alt": "GL360 Logo and Newsletter Animation"
+    },
+    {
+      "type": "gallery",
+      "heading": "Invitation System",
+      "images": [
+        {
+          "image": "5x7_Trifold_Invitation_WithFront_TCCF.png",
+          "alt": "Invitation Front"
+        },
+        {
+          "image": "5x7_Trifold_Invitation_TCCF.png",
+          "alt": "Invitation Inner Spread"
+        }
+      ]
+    },
+    {
+      "type": "gallery",
+      "heading": "Large Format Prints",
+      "images": [
+        {
+          "image": "TCCF_2025_Entrance.png",
+          "alt": "Entrance Artwork"
+        },
+        {
+          "image": "5x10_StepAndRepeat_Mockup.png",
+          "alt": "Step and Repeat"
+        },
+        {
+          "image": "TCCF_2025_Centerpiece.png",
+          "alt": "Centerpiece"
+        }
+      ]
+    }
+  ]
+}
