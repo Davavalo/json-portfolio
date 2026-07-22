@@ -50,6 +50,28 @@
           "alt": "Centerpiece"
         }
       ]
+    },
+    {
+      "type": "gallery",
+      "heading": "Event Photos",
+      "images": [
+        {
+          "image": "Vision Dinner_LFP_Entrance_001.png",
+          "alt": "Entrance Event Photo"
+        },
+        {
+          "image": "Vision 2025-0012.jpg",
+          "alt": "Program Event Photo"
+        },
+        {
+          "image": "Vision 2025-0013.jpg",
+          "alt": "Centerpiece Event Photo"
+        },
+        {
+          "image": "Vision 2025-0002.jpg",
+          "alt": "Table Setup Event Photo"
+        }
+      ]
     }
   ]
 }
