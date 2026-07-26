@@ -1,0 +1,85 @@
+{
+  "thumbnail": {
+    "image": "toyland-thumbnail.png",
+    "alt": "Toyland Ball 2024 Thumbnail"
+  },
+  "title": "All You Need is Love",
+  "year": "2024",
+  "role": "Brand & Event Design",
+  "description": "This retro-inspired theme will create a world where all you need is love. After all, love is the foundation of the hope and educational resources that the Parent Child Center helps provide to make families stronger. With a nod to the peace and love era, this colorful concept will be a wonderful experience for our donors to hear stories of hope.",
+  "sections": [
+    {
+      "type": "text",
+      "heading": "My Role",
+      "content": "I managed the event from concept to completion in collaboration with my creative director. I developed initial concepts for the client and designed all creative assets, including the save the date, an invitation, stationery system, and large-format event graphics such as a step and repeat, entrance, bar fronts, and a custom Volkswagen bus. cutout."
+    },
+    {
+      "type": "gallery",
+      "heading": "Save The Date",
+      "images": [
+        {
+          "image": "toyland-std-front.png",
+          "alt": "Toyland Save The Date Front"
+        },
+        {
+          "image": "toyland-std-back.png",
+          "alt": "Toyland Save The Date Back"
+        }
+      ]
+    },
+    {
+      "type": "gallery",
+      "heading": "Invitation System",
+      "images": [
+        {
+          "image": "toyland-lfp-invitesystem.png",
+          "alt": "Toyland Invitation Front"
+        },
+        {
+          "image": "toyland-lfp-invitesystem.png",
+          "alt": "Toyland Invitation Front"
+        }
+      ]
+    },
+    {
+      "type": "gallery",
+      "heading": "Large Format Prints",
+      "images": [
+        {
+          "image": "toyland-lfp-entrance.png",
+          "alt": "Entrance Artwork"
+        },
+        {
+          "image": "toyland-lfp-bars.png",
+          "alt": "Bar Fronts and Backs"
+        },
+        {
+          "image": "toyland-lfp-bus.png",
+          "alt": "VW Bus Mockup"
+        }
+      ]
+    },
+    {
+      "type": "gallery",
+      "heading": "Event Photos",
+      "images": [
+        {
+          "image": "toyland-ep-tables.png",
+          "alt": "Event Table Setup in Magenta"
+        },
+        {
+          "image": "toyland-ep-tables-2.png",
+          "alt": "Event Table Setup in Magenta"
+        },
+        {
+          "image": "toyland-ep-stepandrepeat.png",
+          "alt": "Centerpiece Event Photo"
+        },
+        {
+          "image": "toyland-ep-bus.png",
+          "alt": "VW Bus Event Photo"
+        }
+      ]
+    }
+  ]
+}

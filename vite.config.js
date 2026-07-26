@@ -1,21 +1,31 @@
 import { defineConfig } from "vite";
 import { resolve } from "path";
+import fs from 'fs'
+
+const projectInputs = {};
+
+const projectFolders = fs.readdirSync("projects", {
+  withFileTypes: true,
+});
+
+for (const folder of projectFolders) {
+  if (!folder.isDirectory()) continue;
+
+  projectInputs[folder.name] = resolve(
+    import.meta.dirname,
+    `projects/${folder.name}/index.html`
+  );
+}
 
 export default defineConfig({
   build: {
     rollupOptions: {
       input: {
-        main: resolve(__dirname, "index.html"),
-        about: resolve(__dirname, "about/index.html"),
-        work: resolve(__dirname, "work/index.html"),
+        main: resolve(import.meta.dirname, "index.html"),
+        about: resolve(import.meta.dirname, "about/index.html"),
+        work: resolve(import.meta.dirname, "work/index.html"),
 
-        moonlight: resolve(
-          __dirname,
-          "projects/moonlight-dumplings/index.html",
-        ),
-
-        sga: resolve(__dirname, "projects/sga-design-group/index.html"),
-        future: resolve(__dirname, "projects/futures-so-bright/index.html"),
+        ...projectInputs,
       },
     },
   },
