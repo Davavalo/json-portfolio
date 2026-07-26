@@ -1,0 +1,36 @@
+{
+  "thumbnail": {
+    "image": "bb-thumbnail.gif",
+    "alt": "Boogie Bowling Thumbnail"
+  },
+  "title": "Boogie Bowling",
+  "year": "2021",
+  "role": "Brand Design",
+  "description": "Boogie Bowling is an imaginary 70’s themed disco and bowling bar. The business includes six lanes for bowling, a variety of themed drinks, and a large dance floor for customers. The goal of Boogie Bowling is to provide its customers with a night full of fun to dance (or bowl) the night away. This branding project focused on highlighting the unique movement found in both bowling and dancing and combining them to give the company a fun and dynamic yet retro feel.",
+  "sections": [
+    {
+      "type": "image",
+      "image": "bb-logos-2UP.png",
+      "alt": "Boogie Bowling Logos"
+    },
+    {
+      "type": "text",
+      "content": "The logo mark combines dance steps with bowling pins and the typography of the logo is further used to create movement in the overall logo through its placement as well as through the varying weights of the type. The rest of the branding makes use of elements found in either bowling or boogie and highlights various aspects of these activities such as the movement, the steps, and the overall dynamism and fun."
+    },
+    {
+      "type": "image",
+      "image": "bb-logo-animation.gif",
+      "alt": "Boogie Bowling Logo Animation"
+    },
+    {
+      "type": "image",
+      "image": "bb-branding-items-merch.png",
+      "alt": "Boogie Bowling Merchandise"
+    },
+    {
+      "type": "image",
+      "image": "bb-branding-items-posters.png",
+      "alt": "Boogie Bowling Posters"
+    }
+  ]
+}

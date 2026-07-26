@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title id="page-title"></title>
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="/victor-favicon.svg" />
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="/src/styles/styles.css" />
+    <link rel="stylesheet" href="/src/fonts/general-sans.css" />
+
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+      xintegrity="sha512-..."
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+
+  <body>
+    <!-- Header -->
+    <div id="header"></div>
+
+    <!-- Project Information -->
+    <main id="project-container" data-project="boogie-bowling"></main>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" aria-label="Back to top" title="Back to top">
+      <svg
+        viewBox="0 0 24 24"
+        width="20"
+        height="20"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      >
+        <line x1="12" y1="19" x2="12" y2="5"></line>
+        <polyline points="5 12 12 5 19 12"></polyline>
+      </svg>
+    </button>
+
+    <!-- Lightbox -->
+    <div id="lightbox" class="lightbox">
+      <img src="" alt="" class="lightbox-full" />
+      <button class="lightbox-prev" aria-label="Previous image">
+        &#10094;
+      </button>
+      <button class="lightbox-next" aria-label="Next image">&#10095;</button>
+      <span class="lightbox-close">&times;</span>
+    </div>
+
+    <!-- Footer -->
+    <div id="footer"></div>
+
+    <!-- Scripts -->
+    <script type="module" src="/src/back-to-top.js"></script>
+    <script type="module" src="/src/project-loader.js"></script>
+    <script type="module" src="/src/lightbox.js"></script>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
