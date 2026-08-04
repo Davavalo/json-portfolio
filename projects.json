@@ -1,0 +1,65 @@
+[
+  {
+    "slug": "futures-so-bright",
+    "thumbnail": {
+      "image": "TCCF_FutureSoBright_Thumbnail.png",
+      "alt": "Future’s So Bright Thumbnail"
+    },
+    "title": "Future's So Bright",
+    "year": "2025"
+  },
+  {
+    "slug": "all-you-need-is-love",
+    "thumbnail": {
+      "image": "toyland-thumbnail.png",
+      "alt": "Toyland Ball 2024 Thumbnail"
+    },
+    "title": "All You Need is Love",
+    "year": "2024"
+  },
+  {
+    "slug": "sga-design-group",
+    "thumbnail": {
+      "image": "sga thumbnail.png",
+      "alt": "SGA Design Group cover image"
+    },
+    "title": "SGA Design Group",
+    "year": "2023"
+  },
+  {
+    "slug": "an-unaccepting-nation",
+    "thumbnail": {
+      "image": "AUN-thumbnail.png",
+      "alt": "An Unaccepting Nation Thumbnail"
+    },
+    "title": "An Unaccepting Nation",
+    "year": "2021"
+  },
+  {
+    "slug": "boogie-bowling",
+    "thumbnail": {
+      "image": "bb-thumbnail.gif",
+      "alt": "Boogie Bowling Thumbnail"
+    },
+    "title": "Boogie Bowling",
+    "year": "2021"
+  },
+  {
+    "slug": "four-paws",
+    "thumbnail": {
+      "image": "fp-thumbnail.gif",
+      "alt": "Four Paws Thumbnail"
+    },
+    "title": "Four Paws",
+    "year": "2021"
+  },
+  {
+    "slug": "moonlight-dumplings",
+    "thumbnail": {
+      "image": "Moonlight_Cover_Image.png",
+      "alt": "Moonlight Dumplings cover image"
+    },
+    "title": "Moonlight Dumplings",
+    "year": "2021"
+  }
+]

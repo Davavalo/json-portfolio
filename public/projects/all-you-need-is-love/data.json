@@ -33,11 +33,11 @@
       "images": [
         {
           "image": "toyland-lfp-invitesystem.png",
-          "alt": "Toyland Invitation Front"
+          "alt": "Toyland Invitation Only"
         },
         {
-          "image": "toyland-lfp-invitesystem.png",
-          "alt": "Toyland Invitation Front"
+          "image": "toyland-lfp-invitesystem-2.png",
+          "alt": "Toyland Invitation With Reply Card and Envelopes"
         }
       ]
     },
