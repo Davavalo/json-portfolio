@@ -6,6 +6,7 @@
   "title": "An Unaccepting Nation",
   "year": "2021",
   "role": "Interactive Design",
+  "featured": false,
   "description": "This infographic website examines some of the issues with the naturalization process in the United States and breaks down the different types of immigration and the way in which these immigrants have to go through the naturalization process in order to become citizens. Through a series of illustrations and information this infographic discusses the issues and benefits of immigration and naturalization in the United States.",
   "sections": [
     {
@@ -18,7 +19,7 @@
       "image": "AUN-make-a-change.png",
       "alt": "Infographic page stating possible solutions"
     },
-        {
+    {
       "type": "image",
       "image": "AUN-all-pages.png",
       "alt": "An overview of all the pages in the infographic website"

@@ -6,7 +6,9 @@
       "alt": "Future’s So Bright Thumbnail"
     },
     "title": "Future's So Bright",
-    "year": "2025"
+    "year": "2025",
+    "role": "Event Design",
+    "featured": true
   },
   {
     "slug": "all-you-need-is-love",
@@ -15,7 +17,9 @@
       "alt": "Toyland Ball 2024 Thumbnail"
     },
     "title": "All You Need is Love",
-    "year": "2024"
+    "year": "2024",
+    "role": "Brand & Event Design",
+    "featured": false
   },
   {
     "slug": "sga-design-group",
@@ -24,7 +28,9 @@
       "alt": "SGA Design Group cover image"
     },
     "title": "SGA Design Group",
-    "year": "2023"
+    "year": "2023",
+    "role": "Brand Design",
+    "featured": true
   },
   {
     "slug": "an-unaccepting-nation",
@@ -33,7 +39,9 @@
       "alt": "An Unaccepting Nation Thumbnail"
     },
     "title": "An Unaccepting Nation",
-    "year": "2021"
+    "year": "2021",
+    "role": "Interactive Design",
+    "featured": false
   },
   {
     "slug": "boogie-bowling",
@@ -42,7 +50,9 @@
       "alt": "Boogie Bowling Thumbnail"
     },
     "title": "Boogie Bowling",
-    "year": "2021"
+    "year": "2021",
+    "role": "Brand Design",
+    "featured": false
   },
   {
     "slug": "four-paws",
@@ -51,7 +61,9 @@
       "alt": "Four Paws Thumbnail"
     },
     "title": "Four Paws",
-    "year": "2021"
+    "year": "2021",
+    "role": "Brand Design",
+    "featured": false
   },
   {
     "slug": "moonlight-dumplings",
@@ -60,6 +72,8 @@
       "alt": "Moonlight Dumplings cover image"
     },
     "title": "Moonlight Dumplings",
-    "year": "2021"
+    "year": "2021",
+    "role": "Brand Design",
+    "featured": false
   }
 ]

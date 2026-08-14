@@ -32,13 +32,15 @@ function mergeJsonFiles() {
 
     jsonPaths.forEach((filePath) => {
       const fileData = fs.readFileSync(filePath, "utf8");
-      const { thumbnail, title, year } = JSON.parse(fileData);
+      const { thumbnail, title, year, role, featured } = JSON.parse(fileData);
 
       combinedData.push({
         slug: path.basename(path.dirname(filePath)),
         thumbnail,
         title,
         year,
+        role,
+        featured,
       });
     });
 

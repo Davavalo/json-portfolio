@@ -41,38 +41,15 @@
       <section class="container mb-4">
         <h2 class="mb-2">Featured Projects</h2>
 
-        <div class="projects-grid">
-          <a href="/projects/futures-so-bright/" class="project-card">
-            <img
-              src="/projects/futures-so-bright/images/TCCF_FutureSoBright_Thumbnail.png"
-              alt="Future's So Bright Event Design"
-              width="1920"
-              height="1080"
-              loading="lazy"
-            />
-            <div class="project-info">
-              <h3>Future's So Bright</h3>
-              <p>Event Design</p>
-            </div>
-          </a>
-
-          <a href="/projects/sga-design-group/" class="project-card">
-            <img
-              src="/projects/sga-design-group/images/sga thumbnail.png"
-              alt="SGA Design Group Brand Design"
-              width="1920"
-              height="1080"
-              loading="lazy"
-            />
-            <div class="project-info">
-              <h3>SGA Design Group</h3>
-              <p>Brand Design</p>
-            </div>
-          </a>
-        </div>
+        <div
+          id="grid-container"
+          class="projects-grid"
+          data-grid-type="featured"
+        ></div>
       </section>
     </main>
     <div id="footer"></div>
     <script type="module" src="/src/main.js"></script>
+    <script type="module" src="/src/project-grid-loader.js"></script>
   </body>
 </html>
