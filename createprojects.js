@@ -23,7 +23,7 @@ function getAllJsonFiles(dirPath, arrayOfFiles = []) {
 }
 
 /**
- * Reads, parses, and aggregates the thumbnail, title and year into one json file.
+ * Reads, parses, and combines the thumbnail, title and year and featured status into one json file.
  */
 function mergeJsonFiles() {
   try {
