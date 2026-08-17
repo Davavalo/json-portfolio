@@ -2,7 +2,7 @@ import fs from "fs";
 import path from "path";
 
 const ROOT_DIR = "./public/projects";
-const OUTPUT_FILE = "./projects.json";
+const OUTPUT_FILE = "./public/projects.json";
 
 function getAllJsonFiles(dirPath, arrayOfFiles = []) {
   const files = fs.readdirSync(dirPath);
