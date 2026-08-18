@@ -3,18 +3,17 @@ import path from "path";
 
 const ROOT_DIR = "./public/projects";
 const OUTPUT_FILE = "./public/projects.json";
+const PROJECT_PAGES_DIR = "./projects";
 
-function getAllJsonFiles(dirPath, arrayOfFiles = []) {
+function getAllProjectDataFiles(dirPath, arrayOfFiles = []) {
   const files = fs.readdirSync(dirPath);
 
   files.forEach((file) => {
     const filePath = path.join(dirPath, file);
 
     if (fs.statSync(filePath).isDirectory()) {
-      // If it's a directory, dive deeper
-      getAllJsonFiles(filePath, arrayOfFiles);
-    } else if (path.extname(file).toLowerCase() === ".json") {
-      // If it's a JSON file, save the path
+      getAllProjectDataFiles(filePath, arrayOfFiles);
+    } else if (file.toLowerCase() === "data.json") {
       arrayOfFiles.push(filePath);
     }
   });
@@ -23,42 +22,139 @@ function getAllJsonFiles(dirPath, arrayOfFiles = []) {
 }
 
 /**
- * Reads, parses, and combines the thumbnail, title and year and featured status of all projects into one json file.
+ * Escapes values that will be inserted into HTML attributes/content.
+ */
+function escapeHtml(value = "") {
+  return String(value)
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;")
+    .replace(/'/g, "&#039;");
+}
+
+/**
+ * Creates a project index.html file.
+ */
+function generateProjectPage(slug, project) {
+  const projectDir = path.join(PROJECT_PAGES_DIR, slug);
+  const outputPath = path.join(projectDir, "index.html");
+
+  fs.mkdirSync(projectDir, { recursive: true });
+
+  const html = `<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>${escapeHtml(project.title)} — Victor Davalos</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="/victor-favicon.svg" />
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="/src/styles/styles.css" />
+  </head>
+
+  <body>
+    <!-- Header -->
+    <div id="header"></div>
+
+    <!-- Project Information -->
+    <main id="project-container" data-project="${escapeHtml(slug)}"></main>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" aria-label="Back to top" title="Back to top">
+      <svg
+        viewBox="0 0 24 24"
+        width="20"
+        height="20"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      >
+        <line x1="12" y1="19" x2="12" y2="5"></line>
+        <polyline points="5 12 12 5 19 12"></polyline>
+      </svg>
+    </button>
+
+    <!-- Lightbox -->
+    <div id="lightbox" class="lightbox">
+      <img src="" alt="" class="lightbox-full" />
+      <button class="lightbox-prev" aria-label="Previous image">
+        &#10094;
+      </button>
+      <button class="lightbox-next" aria-label="Next image">
+        &#10095;
+      </button>
+      <span class="lightbox-close">&times;</span>
+    </div>
+
+    <!-- Footer -->
+    <div id="footer"></div>
+
+    <!-- Scripts -->
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
+`;
+
+  fs.writeFileSync(outputPath, html, "utf8");
+
+  return outputPath;
+}
+
+/**
+ * Reads all project data, creates projects.json,
+ * and generates an index.html page for every project.
  */
 function mergeJsonFiles() {
   try {
-    const jsonPaths = getAllJsonFiles(ROOT_DIR);
+    const jsonPaths = getAllProjectDataFiles(ROOT_DIR);
     const combinedData = [];
 
     jsonPaths.forEach((filePath) => {
       const fileData = fs.readFileSync(filePath, "utf8");
-      const { thumbnail, title, year, role, featured } = JSON.parse(fileData);
+      const project = JSON.parse(fileData);
+
+      const { thumbnail, title, year, role, featured } = project;
+
+      const slug = path.basename(path.dirname(filePath));
 
       combinedData.push({
-        slug: path.basename(path.dirname(filePath)),
+        slug,
         thumbnail,
         title,
         year,
         role,
         featured,
       });
+
+      generateProjectPage(slug, project);
     });
 
     combinedData.sort((a, b) => Number(b.year) - Number(a.year));
 
-    // Write the unified data array to the output file with readable spacing
     fs.writeFileSync(
       OUTPUT_FILE,
       JSON.stringify(combinedData, null, 2),
       "utf8",
     );
+
     console.log(
-      `Success! Combined ${jsonPaths.length} files into ${OUTPUT_FILE}`,
+      `Success! Combined ${jsonPaths.length} projects into ${OUTPUT_FILE}`,
+    );
+
+    console.log(
+      `Generated ${jsonPaths.length} project pages in ${PROJECT_PAGES_DIR}`,
     );
   } catch (error) {
     console.error("An error occurred during execution:", error.message);
+    process.exit(1);
   }
 }
 
-// Execute the merge
 mergeJsonFiles();
