@@ -127,6 +127,11 @@ button:focus-visible {
 /* ===================================
    NAVIGATION
    =================================== */
+
+#header {
+  min-height: 112px;
+}
+
 .site-nav {
   background-color: var(--charcoal);
   width: 100%;

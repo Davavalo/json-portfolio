@@ -1,5 +1,10 @@
-import { loadHeader } from "./components/header.js";
-import { loadFooter } from "./components/footer.js";
+import "@fortawesome/fontawesome-free/css/fontawesome.css";
+import "@fortawesome/fontawesome-free/css/brands.css";
+import "@fortawesome/fontawesome-free/css/solid.css";
 
-loadHeader();
-loadFooter();
+import "./components/header.js";
+import "./components/footer.js";
+
+import "./scripts/project-grid-loader.js";
+import "./scripts/back-to-top.js";
+import "./scripts/project-loader.js";

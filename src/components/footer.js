@@ -24,3 +24,5 @@ export async function loadFooter() {
     console.error("Footer load failed:", err);
   }
 }
+
+loadFooter();

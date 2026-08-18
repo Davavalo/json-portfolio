@@ -9,6 +9,10 @@ async function loadProject() {
 
   const response = await fetch(`/projects/${projectName}/data.json`);
 
+  if (!response.ok) {
+    throw new Error(`Failed to load project: ${response.status}`);
+  }
+
   const project = await response.json();
 
   document.title = `${project.title} — Victor Davalos`;
@@ -23,6 +27,8 @@ async function loadProject() {
                 src="./images/${project.thumbnail.image}"
                 alt="${project.thumbnail.alt || ""}"
                 class="lightbox-img"
+                loading="eager"
+                fetchpriority="high"
               >
 
               ${
@@ -30,7 +36,6 @@ async function loadProject() {
                   ? `<figcaption>${project.thumbnail.caption}</figcaption>`
                   : ""
               }
-
             </figure>
           </div>
         </div>
@@ -43,7 +48,6 @@ async function loadProject() {
 
     <section class="container work-entry mb-4">
       <div class="work-heading">
-
         <h2 class="work-title">
           ${project.title}
         </h2>
@@ -53,7 +57,6 @@ async function loadProject() {
           <span class="separator">&middot;</span>
           <span>${project.role}</span>
         </div>
-
       </div>
 
       <div class="work-line"></div>
@@ -61,7 +64,6 @@ async function loadProject() {
       <p class="work-description">
         ${project.description}
       </p>
-
     </section>
   `;
 
@@ -70,9 +72,9 @@ async function loadProject() {
       case "image": {
         const imageHTML = section.link
           ? `
-            <a 
-              href="${section.link}" 
-              target="_blank" 
+            <a
+              href="${section.link}"
+              target="_blank"
               rel="noopener noreferrer"
             >
               <img
@@ -86,6 +88,7 @@ async function loadProject() {
               src="./images/${section.image}"
               alt="${section.alt || ""}"
               class="lightbox-img"
+              loading="lazy"
             >
           `;
 
@@ -95,7 +98,6 @@ async function loadProject() {
 
         html += `
           <section class="container image-grid-section mb-4">
-
             ${
               section.heading
                 ? `<h3 class="grid-title">${section.heading}</h3>`
@@ -103,14 +105,11 @@ async function loadProject() {
             }
 
             <div class="image-grid">
-
               <figure>
                 ${imageHTML}
                 ${captionHTML}
               </figure>
-
             </div>
-
           </section>
         `;
 
@@ -122,11 +121,11 @@ async function loadProject() {
           .map(
             (image) => `
               <figure>
-
                 <img
                   src="./images/${image.image}"
                   alt="${image.alt || ""}"
                   class="lightbox-img"
+                  loading="lazy"
                 >
 
                 ${
@@ -134,7 +133,6 @@ async function loadProject() {
                     ? `<figcaption>${image.caption}</figcaption>`
                     : ""
                 }
-
               </figure>
             `,
           )
@@ -142,7 +140,6 @@ async function loadProject() {
 
         html += `
           <section class="container image-grid-section mb-4">
-
             ${
               section.heading
                 ? `<h3 class="grid-title">${section.heading}</h3>`
@@ -150,11 +147,8 @@ async function loadProject() {
             }
 
             <div class="image-grid">
-
               ${imagesHTML}
-
             </div>
-
           </section>
         `;
 
@@ -164,7 +158,6 @@ async function loadProject() {
       case "text": {
         html += `
           <section class="container image-grid-section mb-4">
-
             ${
               section.heading
                 ? `<p><strong>${section.heading}</strong></p>`
@@ -174,7 +167,6 @@ async function loadProject() {
             <p>
               ${section.content}
             </p>
-
           </section>
         `;
 

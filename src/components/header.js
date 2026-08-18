@@ -60,3 +60,5 @@ export async function loadHeader() {
     console.error("Header load failed:", err);
   }
 }
+
+loadHeader();

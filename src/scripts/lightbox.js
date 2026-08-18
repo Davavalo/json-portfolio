@@ -12,19 +12,21 @@ export function lightbox() {
 
   function showImage(index) {
     const img = currentImages[index];
-    if (!img) return;
+
+    if (!img || !lightboxImg) return;
+
     lightboxImg.src = img.src;
     lightboxImg.alt = img.alt || "";
+
     currentIndex = index;
     lightbox.style.display = "flex";
 
-    // Disable scroll
     document.body.classList.add("no-scroll");
 
-    // Hide arrows if only one image
     const showArrows = currentImages.length > 1;
-    nextBtn.style.display = showArrows ? "block" : "none";
-    prevBtn.style.display = showArrows ? "block" : "none";
+
+    if (nextBtn) nextBtn.style.display = showArrows ? "block" : "none";
+    if (prevBtn) prevBtn.style.display = showArrows ? "block" : "none";
   }
 
   function closeLightbox() {
