@@ -1,6 +1,6 @@
 import { defineConfig } from "vite";
 import { resolve } from "path";
-import fs from 'fs'
+import fs from "fs";
 
 const projectInputs = {};
 
@@ -13,7 +13,7 @@ for (const folder of projectFolders) {
 
   projectInputs[folder.name] = resolve(
     import.meta.dirname,
-    `projects/${folder.name}/index.html`
+    `projects/${folder.name}/index.html`,
   );
 }
 
